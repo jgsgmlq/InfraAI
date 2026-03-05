@@ -49,6 +49,19 @@
 | R-013 | 项目初始化工具 | 自动化新项目的框架部署 | `scripts/init_project.py` |
 | R-014 | 框架打包机制 | 一键导出可移植的框架包 | `scripts/export_framework.py` |
 
+### P4 - SDK 架构（已完成）
+
+| ID | 功能 | 状态 | 说明 | 交付物 |
+|----|------|------|------|--------|
+| R-015 | SDK 包架构 | ✅ 完成 | 自包含的功能包：API + CLI + Skills + Tests | `sdks/infra-core/` |
+| R-016 | SDK 规范文档 | ✅ 完成 | 定义 SDK 包结构和命名规范 | `docs/60_sdk_specification.md` |
+| R-017 | Skills 分层设计 | ✅ 完成 | 入口层（.claude/skills/）+ 实现层（SDK 内部） | `docs/50_skills_system.md` |
+| R-018 | SDK 审查工具 | ✅ 完成 | 检查 SDK 包完整性和规范性 | `sdks/infra-core/api/audit.py` |
+| R-019 | SDK CLI 工具 | ✅ 完成 | audit-sdk, audit-docs, audit-skills 命令 | `sdks/infra-core/cli/main.py` |
+| R-020 | Registry API | ✅ 完成 | 加载和验证工具注册表 | `sdks/infra-core/api/registry.py` |
+| R-021 | SDK 单元测试 | ✅ 完成 | registry 和 audit 模块的完整测试 | `sdks/infra-core/tests/` |
+| R-022 | pyproject.toml | ✅ 完成 | 使 SDK 可通过 pip 安装 | `sdks/infra-core/pyproject.toml` |
+
 ---
 
 ## 三、非功能性需求
