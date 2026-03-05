@@ -1,0 +1,163 @@
+# Core Tool Registry
+# Framework built-in tools - these get copied to new projects.
+# Project-specific tools should be in the root registry/tools.yaml
+
+- id: list-tools
+  name: Command Palette
+  version: "1.0.0"
+  changelog: "Initial release"
+  deprecated: false
+  type: cli
+  entry: python scripts/list_tools.py
+  description: Reads the registry and outputs all available tools in a formatted Markdown list.
+  aliases:
+    - "查看工具"
+    - "show tools"
+    - "命令面板"
+  examples:
+    - "python scripts/list_tools.py"
+    - "python scripts/list_tools.py --registry registry/tools.yaml"
+  flags:
+    - name: --registry
+      description: "Path to the tools.yaml registry file (default: registry/tools.yaml)"
+      required: false
+    - name: --help
+      description: Show help message and exit
+      required: false
+  exit_codes:
+    0: Success
+    2: Parameter Error
+    3: Runtime Error
+
+- id: list-skills
+  name: Skills Catalog
+  version: "1.0.0"
+  changelog: "Initial release"
+  deprecated: false
+  type: cli
+  entry: python scripts/list_skills.py
+  description: Lists all available skills from core, project, and external locations.
+  aliases:
+    - "查看技能"
+    - "有哪些能力"
+    - "list capabilities"
+  examples:
+    - "python scripts/list_skills.py"
+    - "python scripts/list_skills.py --verbose"
+  flags:
+    - name: --verbose
+      description: "Show full skill content including trigger phrases"
+      required: false
+    - name: --location
+      description: "Filter by skill location: all, core, project, external"
+      required: false
+    - name: --help
+      description: Show help message and exit
+      required: false
+  exit_codes:
+    0: Success
+    2: Parameter Error
+    3: Runtime Error
+
+- id: audit-registry
+  name: Registry Audit
+  version: "1.0.0"
+  changelog: "Initial release"
+  deprecated: false
+  type: cli
+  entry: python scripts/audit_registry.py
+  description: Checks the health of the tool registry, verifying scripts, tests, and documentation exist.
+  aliases:
+    - "检查工具"
+    - "健康检查"
+    - "audit tools"
+  examples:
+    - "python scripts/audit_registry.py"
+    - "python scripts/audit_registry.py --fix"
+    - "python scripts/audit_registry.py --quiet"
+  flags:
+    - name: --registry
+      description: "Path to the tools.yaml registry file (default: registry/tools.yaml)"
+      required: false
+    - name: --fix
+      description: "Generate template files for missing components"
+      required: false
+    - name: --quiet
+      description: "Only output errors, no success messages"
+      required: false
+    - name: --help
+      description: Show help message and exit
+      required: false
+  exit_codes:
+    0: All checks passed
+    2: Parameter Error
+    3: Some checks failed
+
+- id: init-project
+  name: Project Initializer
+  version: "1.0.0"
+  changelog: "Initial release"
+  deprecated: false
+  type: cli
+  entry: python scripts/init_project.py
+  description: Initializes a new project with the AI-Native Infrastructure Framework.
+  aliases:
+    - "初始化项目"
+    - "创建项目"
+    - "bootstrap project"
+  examples:
+    - "python scripts/init_project.py --target /path/to/project"
+    - "python scripts/init_project.py --target ./new_project --name 'My Project'"
+  flags:
+    - name: --target
+      description: "Target directory for the new project"
+      required: true
+    - name: --name
+      description: "Project name (default: New Project)"
+      required: false
+    - name: --dry-run
+      description: "Show what would be done without making changes"
+      required: false
+    - name: --force
+      description: "Overwrite existing files if present"
+      required: false
+    - name: --help
+      description: Show help message and exit
+      required: false
+  exit_codes:
+    0: Success
+    2: Parameter Error
+    3: Runtime Error
+
+- id: export-framework
+  name: Framework Exporter
+  version: "1.0.0"
+  changelog: "Initial release"
+  deprecated: false
+  type: cli
+  entry: python scripts/export_framework.py
+  description: Exports the AI-Native Infrastructure Framework as a portable zip package.
+  aliases:
+    - "导出框架"
+    - "打包框架"
+    - "export package"
+  examples:
+    - "python scripts/export_framework.py"
+    - "python scripts/export_framework.py --out my_framework.zip"
+  flags:
+    - name: --out
+      description: "Output file path (default: framework.zip)"
+      required: false
+    - name: --dry-run
+      description: "Show what would be included without creating the archive"
+      required: false
+    - name: --verbose
+      description: "Show detailed output"
+      required: false
+    - name: --help
+      description: Show help message and exit
+      required: false
+  exit_codes:
+    0: Success
+    2: Parameter Error
+    3: Runtime Error

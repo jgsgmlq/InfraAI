@@ -1,0 +1,35 @@
+name: infra-core
+version: "1.0.0"
+description: AI-Native Infrastructure Framework 核心 SDK
+author: AI Infrastructure Team
+license: MIT
+
+dependencies:
+  python: ">=3.8"
+  packages:
+    - pyyaml>=6.0
+
+exports:
+  api:
+    - module: api.registry
+      functions:
+        - load_registry
+        - validate_registry
+    - module: api.audit
+      functions:
+        - audit_sdk
+        - audit_skills
+        - audit_docs
+  cli:
+    - command: infra-core
+      entry: cli.main:main
+  skills:
+    - id: audit-sdk
+      entry_skill: .claude/skills/infra-core-audit-sdk.md
+      implementation: skills/audit-sdk.md
+    - id: audit-docs
+      entry_skill: .claude/skills/infra-core-audit-docs.md
+      implementation: skills/audit-docs.md
+    - id: create-sdk
+      entry_skill: .claude/skills/infra-core-create-sdk.md
+      implementation: skills/create-sdk.md
