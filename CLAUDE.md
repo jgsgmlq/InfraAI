@@ -36,10 +36,14 @@ infra_demo/
 │       └── tests/
 │
 ├── docs/                  # 项目级文档
-│   ├── 00_operating_manual.md
-│   ├── 50_skills_system.md
-│   ├── 60_sdk_specification.md
+│   ├── 60_sdk_specification.md  # SDK 规范
+│   ├── TROUBLESHOOTING.md       # 故障排查
 │   └── plans/             # 实施计划
+│
+├── core/                  # 框架核心（可移植模板）
+│   ├── docs/              # 规范文档 (00-50)
+│   ├── .agent/skills/     # 核心 skills
+│   └── ...
 │
 ├── scripts/               # 独立工具脚本（兼容旧架构）
 └── registry/              # 工具注册表（兼容旧架构）
@@ -127,7 +131,7 @@ python scripts/audit_registry.py       # 健康检查
 ### 创建 SDK 时
 
 - 遵循 `docs/60_sdk_specification.md` 规范
-- 遵循 `docs/50_skills_system.md` 的 Skills 分层设计
+- 遵循 `core/docs/50_skills_system.md` 的 Skills 分层设计
 - 错误信息要清晰、可操作
 
 ### 创建 SDK 后
@@ -142,11 +146,12 @@ python scripts/audit_registry.py       # 健康检查
 
 | 文档 | 用途 | 何时阅读 |
 |------|------|----------|
-| `docs/00_operating_manual.md` | 操作原则 | 理解项目核心理念 |
-| `docs/10_tooling_conventions.md` | CLI 规范 | 创建新工具前 |
-| `docs/11_error_handling.md` | 错误处理 | 工具执行失败时 |
-| `docs/50_skills_system.md` | Skills 系统 | 编写或导入 skills 时 |
+| `core/docs/00_operating_manual.md` | 操作原则 | 理解项目核心理念 |
+| `core/docs/10_tooling_conventions.md` | CLI 规范 | 创建新工具前 |
+| `core/docs/11_error_handling.md` | 错误处理 | 工具执行失败时 |
+| `core/docs/50_skills_system.md` | Skills 系统 | 编写或导入 skills 时 |
 | `docs/60_sdk_specification.md` | SDK 规范 | 创建新 SDK 时 |
+| `docs/TROUBLESHOOTING.md` | 故障排查 | 遇到问题时 |
 | `BOOTSTRAP.md` | 初始化指南 | 新项目启动时 |
 
 ---

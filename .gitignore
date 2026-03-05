@@ -23,3 +23,13 @@ Thumbs.db
 
 # Project specific
 *.log
+
+# Sensitive files
+.claude/settings.json.txt
+.claude/settings.local.json
+*.key
+*.pem
+
+# Cache
+.pytest_cache/
+.cache/

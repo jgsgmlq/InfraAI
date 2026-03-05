@@ -14,31 +14,66 @@ Skill 是一个 Markdown 文档，定义了 AI 在特定场景下应该如何行
 
 ## Skills 存放位置
 
-### 分层结构
+### 分层架构（SDK 模式）
 
 ```
 项目根目录/
-├── core/.agent/skills/        # 框架核心 skills（可移植）
-├── project/.agent/skills/     # 项目自定义 skills（不移植）
-└── project/.agent/external/   # 外部导入的 skills（不移植）
+├── .claude/skills/              # Entry Layer - Claude Code 发现入口
+│   └── <sdk>-<skill>.md         # 简短入口文件，指向实现
+│
+├── sdks/<sdk>/skills/           # Implementation Layer - 实际实现
+│   └── <skill>.md               # 完整的技能定义
+│
+├── core/.agent/skills/          # 框架核心 skills（可移植模板）
+└── project/.agent/skills/       # 项目自定义 skills（不移植）
 ```
 
 ### 各层级说明
 
-| 位置 | 用途 | 可移植 | 修改建议 |
-|------|------|--------|----------|
-| `core/.agent/skills/` | 框架通用 skills | ✅ | 谨慎修改，影响所有项目 |
-| `project/.agent/skills/` | 项目专属 skills | ❌ | 自由修改 |
-| `project/.agent/external/` | 外部导入 | ❌ | 不建议直接修改 |
+| 位置 | 用途 | 文件命名 | 说明 |
+|------|------|----------|------|
+| `.claude/skills/` | Claude Code 发现入口 | `<sdk>-<skill>.md` | 简短的入口文件 |
+| `sdks/<sdk>/skills/` | SDK 内部实现 | `<skill>.md` | 完整技能定义（kebab-case）|
+| `core/.agent/skills/` | 框架模板 | `<skill>.md` | 可移植的核心 skills |
+| `project/.agent/skills/` | 项目专属 | `<skill>.md` | 项目特定 skills |
 
 ---
 
 ## 如何编写 Skill
 
-### Step 1: 复制模板
+### SDK 模式（推荐）
+
+1. **在 SDK 中创建实现文件**：
+   ```bash
+   # 创建技能实现
+   touch sdks/my-sdk/skills/my-skill.md
+   ```
+
+2. **创建入口文件**：
+   ```bash
+   # 在 .claude/skills/ 创建入口
+   touch .claude/skills/my-sdk-my-skill.md
+   ```
+
+3. **入口文件内容**：
+   ```markdown
+   ---
+   name: my-sdk-my-skill
+   description: 一句话描述
+   sdk: my-sdk
+   ---
+
+   # My Skill
+
+   Implementation: `sdks/my-sdk/skills/my-skill.md`
+
+   [简短说明，引导读取完整实现]
+   ```
+
+### 传统模式
 
 ```bash
-cp core/.agent/skills/_skill_template.md project/.agent/skills/my_skill.md
+cp core/.agent/skills/_skill_template.md project/.agent/skills/my-skill.md
 ```
 
 ### Step 2: 填写内容
