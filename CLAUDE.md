@@ -2,11 +2,16 @@
 
 > 本文件是 Claude Code 的项目上下文，会自动加载到 AI 对话中。
 
-## 项目概述
+**最高指令**：`.claude/PRIME_DIRECTIVE.md` - 定义项目核心定位和设计原则
 
-这是一个**可移植的 AI 工作环境框架**，用于将资深工程师的规范、工具和工作流封装起来，让 AI 能以高质量、低成本的方式工作。
+## 项目定位
 
-**核心理念**：工具驱动 → AI 可读 → 自我维护 → 可移植
+这是一个 **AI 工作环境框架**：
+- **用户**：使用自然语言下达命令，无需了解技术细节
+- **AI**：根据 Skills 指导进行编程，调用 SDK 工具辅助执行
+- **工具**：提供稳定、可预测的辅助能力
+
+**核心理念**：用户说人话 → AI 按 Skills 编程 → 工具辅助执行
 
 **架构**：SDK 包架构 + Skills 分层设计
 
@@ -22,6 +27,8 @@ infra_demo/
 ├── requirements.txt       # Python 依赖
 │
 ├── .claude/
+│   ├── PRIME_DIRECTIVE.md # 最高指令 - 项目核心定位
+│   ├── commands/          # Claude Code 自定义命令
 │   └── skills/            # Skills 入口（Claude Code 自动识别）
 │       └── <sdk>-<skill>.md
 │
