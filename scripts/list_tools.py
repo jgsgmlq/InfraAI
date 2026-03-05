@@ -1,4 +1,5 @@
 import argparse
+import json
 import sys
 import yaml
 from pathlib import Path
@@ -17,6 +18,16 @@ def parse_args():
         default="registry/tools.yaml",
         help="Path to the tool registry YAML file"
     )
+    parser.add_argument(
+        "--json",
+        action="store_true",
+        help="Output in JSON format"
+    )
+    parser.add_argument(
+        "--compact",
+        action="store_true",
+        help="Output in compact table format"
+    )
     return parser.parse_args()
 
 def load_registry(registry_path: str) -> list:
@@ -24,7 +35,7 @@ def load_registry(registry_path: str) -> list:
     if not path.exists():
         sys.stderr.write(f"Error: Registry file not found at {registry_path}\n")
         sys.exit(3)
-        
+
     try:
         with open(path, 'r', encoding='utf-8') as f:
             registry = yaml.safe_load(f)
@@ -33,7 +44,46 @@ def load_registry(registry_path: str) -> list:
         sys.stderr.write(f"Error reading registry: {e}\n")
         sys.exit(3)
 
+
+def output_json(tools: list):
+    """Output tools in JSON format."""
+    result = {
+        "tools": [
+            {
+                "id": t.get("id", ""),
+                "name": t.get("name", ""),
+                "version": t.get("version", ""),
+                "description": t.get("description", ""),
+                "command": t.get("entry", ""),
+                "aliases": t.get("aliases", []),
+                "deprecated": t.get("deprecated", False)
+            }
+            for t in tools
+        ],
+        "count": len(tools)
+    }
+    print(json.dumps(result, ensure_ascii=False, indent=2))
+
+
+def output_compact(tools: list):
+    """Output tools in compact table format."""
+    if not tools:
+        print("No tools registered.")
+        return
+
+    print(f"{'ID':<20} {'NAME':<25} {'VERSION':<10}")
+    print("-" * 55)
+    for t in tools:
+        tool_id = t.get('id', '')[:20]
+        name = t.get('name', '')[:25]
+        version = t.get('version', '')[:10]
+        deprecated = " [D]" if t.get('deprecated') else ""
+        print(f"{tool_id:<20} {name:<25} {version:<10}{deprecated}")
+    print(f"\nTotal: {len(tools)} tools")
+
+
 def print_palette(tools: list):
+    """Output tools in full markdown format."""
     print("# Command Palette\n")
     if not tools:
         print("No tools registered.")
@@ -79,15 +129,23 @@ def print_palette(tools: list):
 
         print("---")
 
+
 def main():
     try:
         args = parse_args()
     except SystemExit as e:
         # argparse uses exit code 2 for parameter errors
         sys.exit(e.code)
-        
+
     tools = load_registry(args.registry)
-    print_palette(tools)
+
+    if args.json:
+        output_json(tools)
+    elif args.compact:
+        output_compact(tools)
+    else:
+        print_palette(tools)
+
     sys.exit(0)
 
 if __name__ == "__main__":
