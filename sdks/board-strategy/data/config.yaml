@@ -1,0 +1,28 @@
+# 策略配置文件
+
+# 标的池过滤规则
+filter:
+  min_board_count: 2  # 最小连板数
+  exclude_st: true    # 排除 ST 股票
+  exclude_new: true   # 排除次新股（上市 < 60 天）
+
+# 因子权重配置
+factor_weights:
+  price_volume: 0.3      # 量价因子
+  news_catalyst: 0.2     # 资讯催化
+  sentiment: 0.2         # 市场情绪
+  sector_linkage: 0.15   # 板块联动
+  technical: 0.1         # 技术面
+  timing: 0.05           # 时机因子
+
+# 风控参数
+risk_control:
+  confidence_threshold: 0.6  # 置信度阈值
+  max_position: 3            # 单日最大仓位
+  stop_after_losses: 3       # 连续亏损后暂停
+
+# 数据源配置
+data_source:
+  provider: akshare
+  cache_enabled: true
+  cache_ttl: 3600  # 缓存时间（秒）

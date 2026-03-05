@@ -1,0 +1,24 @@
+name: board-strategy
+version: 0.1.0
+description: 打板策略逆向工程与 Workflow 系统
+author: AI-Native Infrastructure
+
+dependencies:
+  - akshare>=1.0.0
+  - pandas>=1.3.0
+  - pydantic>=2.0.0
+
+cli:
+  entry: cli/main.py
+  commands:
+    - ingest: 数据录入与标准化
+    - enrich: 通过 AKShare 补全量价数据
+    - analyze-cot: CoT 结构化拆解
+    - attribution: 归因分析（因子×结果矩阵）
+    - run-pipeline: 运行五步流水线
+    - backtest: 回测工具
+
+skills:
+  - reverse-engineer: 逆向工程 Skill
+  - run-pipeline: 运行流水线 Skill
+  - daily-report: 每日策略报告 Skill
