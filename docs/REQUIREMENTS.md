@@ -62,6 +62,18 @@
 | R-021 | SDK 单元测试 | ✅ 完成 | registry 和 audit 模块的完整测试 | `sdks/infra-core/tests/` |
 | R-022 | pyproject.toml | ✅ 完成 | 使 SDK 可通过 pip 安装 | `sdks/infra-core/pyproject.toml` |
 
+### P5 - 系统改进（已完成）
+
+| ID | 功能 | 状态 | 说明 | 交付物 |
+|----|------|------|------|--------|
+| R-023 | /init 体验增强 | ✅ 完成 | 能力清单、上下文感知、插件透明化 | `.claude/commands/init.md` |
+| R-024 | 需求整理 Skill | ✅ 完成 | 引导用户明确需求 | `clarify-requirements.md` |
+| R-025 | 快速修复 Skill | ✅ 完成 | 简单 bug 修复指南 | `quick-fix.md` |
+| R-026 | 添加功能 Skill | ✅ 完成 | 功能开发指南 | `add-feature.md` |
+| R-027 | Superpowers 桥接 | ✅ 完成 | 外部插件能力索引 | `bridge-superpowers.md` |
+| R-028 | 工具输出增强 | ✅ 完成 | --json, --compact 选项 | `list_tools.py`, `list_skills.py` |
+| R-029 | 错误提示增强 | ✅ 完成 | 包含修复建议 | `audit_all.py` |
+
 ---
 
 ## 三、非功能性需求
