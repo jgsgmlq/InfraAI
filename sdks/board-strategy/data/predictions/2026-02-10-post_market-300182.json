@@ -1,0 +1,14 @@
+{
+  "date": "2026-02-10",
+  "time": "post_market",
+  "model": "MiroMind",
+  "prompt": "从连板逻辑出发，请筛选五只明天最具涨停潜力的股票。",
+  "prediction_id": "2026-02-10-post_market-300182",
+  "predicted_stocks": "捷成股份\n- AI 应用 / Seedance 核心龙头，20cm 2 连板",
+  "limit_up_result": null,
+  "is_sealed": null,
+  "is_touched": null,
+  "raw_cot": null,
+  "cited_source_titles": [],
+  "source_quality": null
+}

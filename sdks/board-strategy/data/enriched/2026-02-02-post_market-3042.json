@@ -1,0 +1,18 @@
+{
+  "prediction": {
+    "date": "2026-02-02",
+    "time": "post_market",
+    "model": "MiroMind",
+    "prompt": "从连板逻辑出发，请筛选五只明天最具涨停潜力的股票。",
+    "prediction_id": "2026-02-02-post_market-3042",
+    "predicted_stocks": "中农联合\n– 农用化工+供销社，二线主线中的高辨识度标，有延续预期",
+    "limit_up_result": "-0.97",
+    "is_sealed": null,
+    "is_touched": null,
+    "raw_cot": null,
+    "cited_source_titles": [],
+    "source_quality": null
+  },
+  "enriched_stocks": [],
+  "cot_analysis": null
+}

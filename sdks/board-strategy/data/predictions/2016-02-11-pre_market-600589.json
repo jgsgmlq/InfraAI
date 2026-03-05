@@ -1,0 +1,14 @@
+{
+  "date": "2016-02-11",
+  "time": "pre_market",
+  "model": "MiroMind",
+  "prompt": "从连板的角度分析，请你选五只今天最有可能晋级的股票",
+  "prediction_id": "2016-02-11-pre_market-600589",
+  "predicted_stocks": "大位科技\n- 3 天 2 板，算力租赁+数据中心方向",
+  "limit_up_result": null,
+  "is_sealed": null,
+  "is_touched": null,
+  "raw_cot": null,
+  "cited_source_titles": [],
+  "source_quality": null
+}

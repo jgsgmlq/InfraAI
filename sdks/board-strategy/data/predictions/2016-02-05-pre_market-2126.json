@@ -1,0 +1,14 @@
+{
+  "date": "2016-02-05",
+  "time": "pre_market",
+  "model": "MiroMind",
+  "prompt": "从连板的角度分析，请你选五只今天最有可能晋级的股票",
+  "prediction_id": "2016-02-05-pre_market-2126",
+  "predicted_stocks": "银轮股份\n– 2连板，龙虎榜净买入居前 → 冲击3连板",
+  "limit_up_result": "0.0275",
+  "is_sealed": null,
+  "is_touched": null,
+  "raw_cot": null,
+  "cited_source_titles": [],
+  "source_quality": null
+}

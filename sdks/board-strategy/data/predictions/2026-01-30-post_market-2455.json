@@ -1,0 +1,14 @@
+{
+  "date": "2026-01-30",
+  "time": "post_market",
+  "model": "MiroMind",
+  "prompt": "从连板逻辑出发，请筛选五只明天最具涨停潜力的股票。",
+  "prediction_id": "2026-01-30-post_market-2455",
+  "predicted_stocks": "百川股份\n- 典型 3 板卡位龙，换手充分+封单扎实，具冲击 4 板潜力",
+  "limit_up_result": "-0.0229",
+  "is_sealed": null,
+  "is_touched": true,
+  "raw_cot": null,
+  "cited_source_titles": [],
+  "source_quality": null
+}

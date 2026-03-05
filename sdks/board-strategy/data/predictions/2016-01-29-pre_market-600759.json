@@ -1,0 +1,14 @@
+{
+  "date": "2016-01-29",
+  "time": "pre_market",
+  "model": "MiroMind",
+  "prompt": "从连板的角度分析，请你选五只今天最有可能晋级的股票",
+  "prediction_id": "2016-01-29-pre_market-600759",
+  "predicted_stocks": "洲际油气\n- 6 天 4 板油气龙头 + 补涨主线",
+  "limit_up_result": "0.1006",
+  "is_sealed": true,
+  "is_touched": true,
+  "raw_cot": null,
+  "cited_source_titles": [],
+  "source_quality": null
+}

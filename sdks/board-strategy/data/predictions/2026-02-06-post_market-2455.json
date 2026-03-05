@@ -1,0 +1,14 @@
+{
+  "date": "2026-02-06",
+  "time": "post_market",
+  "model": "MiroMind",
+  "prompt": "从连板逻辑出发，请筛选五只明天最具涨停潜力的股票。",
+  "prediction_id": "2026-02-06-post_market-2455",
+  "predicted_stocks": "百川股份\n- 化工＋锂电材料＋TDI涨价，能化主线中的强势龙",
+  "limit_up_result": "0.0996",
+  "is_sealed": true,
+  "is_touched": true,
+  "raw_cot": null,
+  "cited_source_titles": [],
+  "source_quality": null
+}

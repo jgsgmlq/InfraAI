@@ -1,0 +1,18 @@
+{
+  "prediction": {
+    "date": "2026-01-27",
+    "time": "pre_market",
+    "model": "MiroMind",
+    "prompt": "从连板的角度分析，请你选五只明天最有可能晋级的股票",
+    "prediction_id": "2026-01-27-pre_market-2201",
+    "predicted_stocks": "九鼎新材 \n– “9天5板”高标，风电/航天+并购预期",
+    "limit_up_result": "-0.0233",
+    "is_sealed": null,
+    "is_touched": null,
+    "raw_cot": null,
+    "cited_source_titles": [],
+    "source_quality": null
+  },
+  "enriched_stocks": [],
+  "cot_analysis": null
+}

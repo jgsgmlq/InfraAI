@@ -1,0 +1,18 @@
+{
+  "prediction": {
+    "date": "2026-01-30",
+    "time": "post_market",
+    "model": "MiroMind",
+    "prompt": "从连板逻辑出发，请筛选五只明天最具涨停潜力的股票。",
+    "prediction_id": "2026-01-30-post_market-2009",
+    "predicted_stocks": "天奇股份\n– 人形机器人与新能源回收双逻辑，高换手强趋势，具再封潜力",
+    "limit_up_result": "0.0476",
+    "is_sealed": null,
+    "is_touched": null,
+    "raw_cot": null,
+    "cited_source_titles": [],
+    "source_quality": null
+  },
+  "enriched_stocks": [],
+  "cot_analysis": null
+}

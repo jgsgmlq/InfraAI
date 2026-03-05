@@ -1,0 +1,14 @@
+{
+  "date": "2026-01-28",
+  "time": "pre_market",
+  "model": "MiroMind",
+  "prompt": "从连板的角度分析，请你选五只今天最有可能晋级的股票",
+  "prediction_id": "2026-01-28-pre_market-2155",
+  "predicted_stocks": "湖南黄金\n– 贵金属/黄金 + 重组题材",
+  "limit_up_result": "0.1",
+  "is_sealed": true,
+  "is_touched": true,
+  "raw_cot": null,
+  "cited_source_titles": [],
+  "source_quality": null
+}

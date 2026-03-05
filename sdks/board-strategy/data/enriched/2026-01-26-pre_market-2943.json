@@ -1,0 +1,18 @@
+{
+  "prediction": {
+    "date": "2026-01-26",
+    "time": "pre_market",
+    "model": "MiroMind",
+    "prompt": "从连板的角度分析，请你选五只明天最有可能晋级的股票",
+    "prediction_id": "2026-01-26-pre_market-2943",
+    "predicted_stocks": "宇晶股份​ \n– 光伏设备+金刚线+业绩改善，6天3板",
+    "limit_up_result": "0.1",
+    "is_sealed": true,
+    "is_touched": true,
+    "raw_cot": null,
+    "cited_source_titles": [],
+    "source_quality": null
+  },
+  "enriched_stocks": [],
+  "cot_analysis": null
+}

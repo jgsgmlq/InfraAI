@@ -1,0 +1,14 @@
+{
+  "date": "2026-01-28",
+  "time": "post_market",
+  "model": "MiroMind",
+  "prompt": "从连板逻辑出发，请筛选五只明天最具涨停潜力的股票。",
+  "prediction_id": "2026-01-28-post_market-603619",
+  "predicted_stocks": "中曼石油\n– AI 应用高标龙头，9 天 5 板",
+  "limit_up_result": "-0.0692",
+  "is_sealed": null,
+  "is_touched": null,
+  "raw_cot": null,
+  "cited_source_titles": [],
+  "source_quality": null
+}

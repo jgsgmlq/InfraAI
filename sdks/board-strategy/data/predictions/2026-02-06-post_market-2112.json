@@ -1,0 +1,14 @@
+{
+  "date": "2026-02-06",
+  "time": "post_market",
+  "model": "MiroMind",
+  "prompt": "从连板逻辑出发，请筛选五只明天最具涨停潜力的股票。",
+  "prediction_id": "2026-02-06-post_market-2112",
+  "predicted_stocks": "三变科技\n- xAI＋电网设备，中位高度＋封单适中",
+  "limit_up_result": "-0.0043",
+  "is_sealed": null,
+  "is_touched": null,
+  "raw_cot": null,
+  "cited_source_titles": [],
+  "source_quality": null
+}

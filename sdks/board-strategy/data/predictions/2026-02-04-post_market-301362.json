@@ -1,0 +1,14 @@
+{
+  "date": "2026-02-04",
+  "time": "post_market",
+  "model": "MiroMind",
+  "prompt": "从连板逻辑出发，请筛选五只明天最具涨停潜力的股票。",
+  "prediction_id": "2026-02-04-post_market-301362",
+  "predicted_stocks": "民爆光电\n– 20cm 创业板 2 连板，航天+高弹性",
+  "limit_up_result": "0.2",
+  "is_sealed": true,
+  "is_touched": true,
+  "raw_cot": null,
+  "cited_source_titles": [],
+  "source_quality": null
+}

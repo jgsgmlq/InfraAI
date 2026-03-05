@@ -1,0 +1,14 @@
+{
+  "date": "2016-01-29",
+  "time": "pre_market",
+  "model": "MiroMind",
+  "prompt": "从连板的角度分析，请你选五只今天最有可能晋级的股票",
+  "prediction_id": "2016-01-29-pre_market-2342",
+  "predicted_stocks": "巨力索具 \n– 6 天 4 板 + 商业航天高人气 + 机构实打实净买入",
+  "limit_up_result": "-0.0268",
+  "is_sealed": null,
+  "is_touched": null,
+  "raw_cot": null,
+  "cited_source_titles": [],
+  "source_quality": null
+}

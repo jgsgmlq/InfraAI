@@ -1,0 +1,14 @@
+{
+  "date": "2026-02-06",
+  "time": "post_market",
+  "model": "MiroMind",
+  "prompt": "从连板逻辑出发，请筛选五只明天最具涨停潜力的股票。",
+  "prediction_id": "2026-02-06-post_market-300912",
+  "predicted_stocks": "凯龙高科\n– 20CM并购＋机器人产业链，封单最凶",
+  "limit_up_result": "0.2",
+  "is_sealed": true,
+  "is_touched": true,
+  "raw_cot": null,
+  "cited_source_titles": [],
+  "source_quality": null
+}

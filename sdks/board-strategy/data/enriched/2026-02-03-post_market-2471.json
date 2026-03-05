@@ -1,0 +1,18 @@
+{
+  "prediction": {
+    "date": "2026-02-03",
+    "time": "post_market",
+    "model": "MiroMind",
+    "prompt": "从连板逻辑出发，请筛选五只明天最具涨停潜力的股票。",
+    "prediction_id": "2026-02-03-post_market-2471",
+    "predicted_stocks": "中超控股（002471）​\n– 商业航天+军工+高温合金，1–2 板梯队，跟随龙头",
+    "limit_up_result": "-0.0401",
+    "is_sealed": null,
+    "is_touched": null,
+    "raw_cot": null,
+    "cited_source_titles": [],
+    "source_quality": null
+  },
+  "enriched_stocks": [],
+  "cot_analysis": null
+}

@@ -1,0 +1,18 @@
+{
+  "prediction": {
+    "date": "2016-02-06",
+    "time": "pre_market",
+    "model": "MiroMind",
+    "prompt": "从连板的角度分析，请你选五只今天最有可能晋级的股票",
+    "prediction_id": "2016-02-06-pre_market-603616",
+    "predicted_stocks": "韩建河山\n– 3 连板，重大资产重组+建材地产",
+    "limit_up_result": "0.0995",
+    "is_sealed": true,
+    "is_touched": true,
+    "raw_cot": null,
+    "cited_source_titles": [],
+    "source_quality": null
+  },
+  "enriched_stocks": [],
+  "cot_analysis": null
+}

@@ -1,0 +1,14 @@
+{
+  "date": "2026-01-30",
+  "time": "post_market",
+  "model": "MiroMind",
+  "prompt": "从连板逻辑出发，请筛选五只明天最具涨停潜力的股票。",
+  "prediction_id": "2026-01-30-post_market-600313",
+  "predicted_stocks": "农发种业\n- 农业板块新晋高标之一，叠加政策与商品逻辑，具继续上攻可能",
+  "limit_up_result": "-0.0815",
+  "is_sealed": null,
+  "is_touched": null,
+  "raw_cot": null,
+  "cited_source_titles": [],
+  "source_quality": null
+}

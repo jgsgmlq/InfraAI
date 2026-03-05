@@ -1,0 +1,14 @@
+{
+  "date": "2026-01-26",
+  "time": "pre_market",
+  "model": "MiroMind",
+  "prompt": "从连板的角度分析，请你选五只明天最有可能晋级的股票",
+  "prediction_id": "2026-01-26-pre_market-601615",
+  "predicted_stocks": "明阳智能\n– 风电龙头+太空光伏+并购预期，2连板",
+  "limit_up_result": "0.0579",
+  "is_sealed": null,
+  "is_touched": null,
+  "raw_cot": null,
+  "cited_source_titles": [],
+  "source_quality": null
+}

@@ -1,0 +1,18 @@
+{
+  "prediction": {
+    "date": "2026-02-09",
+    "time": "post_market",
+    "model": "MiroMind",
+    "prompt": "从连板逻辑出发，请筛选五只明天最具涨停潜力的股票。",
+    "prediction_id": "2026-02-09-post_market-600330",
+    "predicted_stocks": "天通股份\n- 5G/先进封装/物联网综合逻辑，高位趋势龙",
+    "limit_up_result": "0.0076",
+    "is_sealed": null,
+    "is_touched": null,
+    "raw_cot": null,
+    "cited_source_titles": [],
+    "source_quality": null
+  },
+  "enriched_stocks": [],
+  "cot_analysis": null
+}

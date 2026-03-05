@@ -1,0 +1,18 @@
+{
+  "prediction": {
+    "date": "2026-02-10",
+    "time": "post_market",
+    "model": "MiroMind",
+    "prompt": "从连板逻辑出发，请筛选五只明天最具涨停潜力的股票。",
+    "prediction_id": "2026-02-10-post_market-2485",
+    "predicted_stocks": "ST 雪发\n- ST 板块高标，5 天 3 板，低价小盘",
+    "limit_up_result": null,
+    "is_sealed": null,
+    "is_touched": null,
+    "raw_cot": null,
+    "cited_source_titles": [],
+    "source_quality": null
+  },
+  "enriched_stocks": [],
+  "cot_analysis": null
+}

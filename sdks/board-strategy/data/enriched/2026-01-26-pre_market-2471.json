@@ -1,0 +1,18 @@
+{
+  "prediction": {
+    "date": "2026-01-26",
+    "time": "pre_market",
+    "model": "MiroMind",
+    "prompt": "从连板的角度分析，请你选五只明天最有可能晋级的股票",
+    "prediction_id": "2026-01-26-pre_market-2471",
+    "predicted_stocks": "中超控股（002471）​\n– 商业航天+军工+高温合金，当前2连板",
+    "limit_up_result": "0.0666",
+    "is_sealed": null,
+    "is_touched": true,
+    "raw_cot": null,
+    "cited_source_titles": [],
+    "source_quality": null
+  },
+  "enriched_stocks": [],
+  "cot_analysis": null
+}

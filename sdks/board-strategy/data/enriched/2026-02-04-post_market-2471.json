@@ -1,0 +1,18 @@
+{
+  "prediction": {
+    "date": "2026-02-04",
+    "time": "post_market",
+    "model": "MiroMind",
+    "prompt": "从连板逻辑出发，请筛选五只明天最具涨停潜力的股票。",
+    "prediction_id": "2026-02-04-post_market-2471",
+    "predicted_stocks": "中超控股\n- 2 连板，航天主线中的中市值品种",
+    "limit_up_result": "0.0484",
+    "is_sealed": null,
+    "is_touched": null,
+    "raw_cot": null,
+    "cited_source_titles": [],
+    "source_quality": null
+  },
+  "enriched_stocks": [],
+  "cot_analysis": null
+}

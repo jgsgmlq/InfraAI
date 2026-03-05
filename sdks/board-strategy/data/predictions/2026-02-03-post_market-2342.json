@@ -1,0 +1,14 @@
+{
+  "date": "2026-02-03",
+  "time": "post_market",
+  "model": "MiroMind",
+  "prompt": "从连板逻辑出发，请筛选五只明天最具涨停潜力的股票。",
+  "prediction_id": "2026-02-03-post_market-2342",
+  "predicted_stocks": "巨力索具\n- 商业航天空间龙头，10天5板+板块涨停潮，仍有继续加速或换手机会",
+  "limit_up_result": "0.0999",
+  "is_sealed": true,
+  "is_touched": true,
+  "raw_cot": null,
+  "cited_source_titles": [],
+  "source_quality": null
+}

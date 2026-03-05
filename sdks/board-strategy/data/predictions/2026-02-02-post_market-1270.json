@@ -1,0 +1,14 @@
+{
+  "date": "2026-02-02",
+  "time": "post_market",
+  "model": "MiroMind",
+  "prompt": "从连板逻辑出发，请筛选五只明天最具涨停潜力的股票。",
+  "prediction_id": "2026-02-02-post_market-1270",
+  "predicted_stocks": "*ST铖昌\n– 商业航天妖股，高度与妖性兼具，但ST+监管风险极大",
+  "limit_up_result": "-0.0106",
+  "is_sealed": null,
+  "is_touched": null,
+  "raw_cot": null,
+  "cited_source_titles": [],
+  "source_quality": null
+}

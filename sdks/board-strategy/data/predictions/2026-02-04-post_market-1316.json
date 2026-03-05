@@ -1,0 +1,14 @@
+{
+  "date": "2026-02-04",
+  "time": "post_market",
+  "model": "MiroMind",
+  "prompt": "从连板逻辑出发，请筛选五只明天最具涨停潜力的股票。",
+  "prediction_id": "2026-02-04-post_market-1316",
+  "predicted_stocks": "润贝航科\n- 4 天 2 板，航天+业绩预增+低空经济",
+  "limit_up_result": "0.0401",
+  "is_sealed": null,
+  "is_touched": null,
+  "raw_cot": null,
+  "cited_source_titles": [],
+  "source_quality": null
+}

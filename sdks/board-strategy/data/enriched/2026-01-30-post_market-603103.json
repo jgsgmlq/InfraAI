@@ -1,0 +1,18 @@
+{
+  "prediction": {
+    "date": "2026-01-30",
+    "time": "post_market",
+    "model": "MiroMind",
+    "prompt": "从连板逻辑出发，请筛选五只明天最具涨停潜力的股票。",
+    "prediction_id": "2026-01-30-post_market-603103",
+    "predicted_stocks": "横店影视\n- 春节档时间窗口强驱动，低换手锁仓，易走 3 板甚至主线延伸",
+    "limit_up_result": "0.1",
+    "is_sealed": true,
+    "is_touched": true,
+    "raw_cot": null,
+    "cited_source_titles": [],
+    "source_quality": null
+  },
+  "enriched_stocks": [],
+  "cot_analysis": null
+}

@@ -1,0 +1,18 @@
+{
+  "prediction": {
+    "date": "2026-01-30",
+    "time": "post_market",
+    "model": "MiroMind",
+    "prompt": "从连板逻辑出发，请筛选五只明天最具涨停潜力的股票。",
+    "prediction_id": "2026-01-30-post_market-995",
+    "predicted_stocks": "皇台酒业\n- 白酒整体高潮后的延续博弈，筹码换手充分，有继续加速机会",
+    "limit_up_result": "0.0998",
+    "is_sealed": true,
+    "is_touched": true,
+    "raw_cot": null,
+    "cited_source_titles": [],
+    "source_quality": null
+  },
+  "enriched_stocks": [],
+  "cot_analysis": null
+}

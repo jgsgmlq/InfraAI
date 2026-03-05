@@ -1,0 +1,14 @@
+{
+  "date": "2026-02-03",
+  "time": "post_market",
+  "model": "MiroMind",
+  "prompt": "从连板逻辑出发，请筛选五只明天最具涨停潜力的股票。",
+  "prediction_id": "2026-02-03-post_market-600986",
+  "predicted_stocks": "浙文互联\n- AI 应用总龙，18天8板的超长强势股，多日龙虎榜高换手，具备再度涨停与大波动潜力",
+  "limit_up_result": "-0.0396",
+  "is_sealed": null,
+  "is_touched": null,
+  "raw_cot": null,
+  "cited_source_titles": [],
+  "source_quality": null
+}
