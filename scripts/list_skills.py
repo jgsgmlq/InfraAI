@@ -12,6 +12,7 @@ Exit codes:
 """
 
 import argparse
+import json
 import re
 import sys
 from pathlib import Path
@@ -37,6 +38,16 @@ def parse_args():
         choices=["all", "core", "project", "external"],
         default="all",
         help="Filter by skill location (default: all)"
+    )
+    parser.add_argument(
+        "--json",
+        action="store_true",
+        help="Output in JSON format"
+    )
+    parser.add_argument(
+        "--compact",
+        action="store_true",
+        help="Output in compact table format"
     )
     return parser.parse_args()
 
@@ -107,6 +118,55 @@ def parse_skill_file(file_path: Path) -> dict:
     return skill
 
 
+def output_json(skills: dict, location_filter: str):
+    """Output skills in JSON format."""
+    result = {"skills": [], "count": 0}
+
+    for loc_name, files in skills.items():
+        if location_filter != "all" and location_filter != loc_name:
+            continue
+
+        for f in sorted(files):
+            skill = parse_skill_file(f)
+            result["skills"].append({
+                "id": skill["name"],
+                "title": skill.get("title", ""),
+                "purpose": skill.get("purpose", ""),
+                "location": loc_name,
+                "triggers": skill.get("triggers", []),
+                "command": skill.get("command", "")
+            })
+
+    result["count"] = len(result["skills"])
+    print(json.dumps(result, ensure_ascii=False, indent=2))
+
+
+def output_compact(skills: dict, location_filter: str):
+    """Output skills in compact table format."""
+    all_skills = []
+
+    for loc_name, files in skills.items():
+        if location_filter != "all" and location_filter != loc_name:
+            continue
+
+        for f in sorted(files):
+            skill = parse_skill_file(f)
+            all_skills.append((loc_name, skill))
+
+    if not all_skills:
+        print("No skills found.")
+        return
+
+    print(f"{'ID':<25} {'TITLE':<30} {'LOCATION':<10}")
+    print("-" * 65)
+    for loc_name, skill in all_skills:
+        skill_id = skill["name"][:25]
+        title = (skill.get("title") or skill["name"])[:30]
+        print(f"{skill_id:<25} {title:<30} {loc_name:<10}")
+
+    print(f"\nTotal: {len(all_skills)} skills")
+
+
 def print_skills(skills: dict, verbose: bool, location_filter: str):
     """Print skills in Markdown format."""
     print("# Available Skills\n")
@@ -154,7 +214,14 @@ def main():
         sys.exit(e.code)
 
     skills = find_skill_files()
-    print_skills(skills, args.verbose, args.location)
+
+    if args.json:
+        output_json(skills, args.location)
+    elif args.compact:
+        output_compact(skills, args.location)
+    else:
+        print_skills(skills, args.verbose, args.location)
+
     sys.exit(0)
 
 
