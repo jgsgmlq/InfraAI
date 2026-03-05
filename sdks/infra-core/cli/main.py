@@ -19,6 +19,7 @@ from api import (
     audit_docs,
     AuditSeverity,
 )
+from api.scaffold import create_sdk
 from version import __version__
 
 
@@ -96,6 +97,40 @@ def cmd_audit_skills(args):
     return 0 if result.passed else 3
 
 
+def cmd_create_sdk(args):
+    """Handle create-sdk command."""
+    result = create_sdk(
+        sdk_name=args.name,
+        target_dir=args.target,
+        description=args.description or "",
+        author=args.author or "AI Infrastructure Team",
+        version=args.version or "1.0.0",
+        dry_run=args.dry_run
+    )
+
+    if result['success']:
+        if args.dry_run:
+            print(f"Would create SDK at: {result['path']}")
+            print("\nFiles to create:")
+            for f in result['files_created']:
+                print(f"  - {f}")
+        else:
+            print(f"SDK created at: {result['path']}")
+            print(f"\nFiles created: {len(result['files_created'])}")
+            if args.verbose:
+                for f in result['files_created']:
+                    print(f"  - {f}")
+            print("\nNext steps:")
+            print(f"  1. cd {result['path']}")
+            print(f"  2. Edit manifest.yaml and README.md")
+            print(f"  3. Add your API code to api/")
+            print(f"  4. Run: python sdks/infra-core/cli/main.py audit-sdk {result['path']}")
+        return 0
+    else:
+        print(f"Error: {result['message']}", file=sys.stderr)
+        return 3
+
+
 def main():
     """Main entry point."""
     parser = argparse.ArgumentParser(
@@ -140,6 +175,20 @@ def main():
     audit_skills_parser.add_argument("-v", "--verbose", action="store_true")
     audit_skills_parser.add_argument("-q", "--quiet", action="store_true")
     audit_skills_parser.set_defaults(func=cmd_audit_skills)
+
+    # create-sdk command
+    create_sdk_parser = subparsers.add_parser(
+        "create-sdk",
+        help="Create a new SDK package"
+    )
+    create_sdk_parser.add_argument("name", help="SDK name (kebab-case, e.g., 'my-sdk')")
+    create_sdk_parser.add_argument("--target", default="sdks", help="Target directory (default: sdks)")
+    create_sdk_parser.add_argument("--description", help="SDK description")
+    create_sdk_parser.add_argument("--author", help="Author name")
+    create_sdk_parser.add_argument("--version", help="Initial version (default: 1.0.0)")
+    create_sdk_parser.add_argument("--dry-run", action="store_true", help="Show what would be created")
+    create_sdk_parser.add_argument("-v", "--verbose", action="store_true")
+    create_sdk_parser.set_defaults(func=cmd_create_sdk)
 
     args = parser.parse_args()
 

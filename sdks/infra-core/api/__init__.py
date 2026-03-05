@@ -15,6 +15,7 @@ from .audit import (
     AuditFinding,
     AuditSeverity,
 )
+from .scaffold import create_sdk
 
 __all__ = [
     # Registry
@@ -30,4 +31,6 @@ __all__ = [
     "AuditResult",
     "AuditFinding",
     "AuditSeverity",
+    # Scaffold
+    "create_sdk",
 ]

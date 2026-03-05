@@ -204,3 +204,46 @@
     0: Success
     2: Parameter Error
     3: Runtime Error
+
+- id: audit-all
+  name: Unified Audit
+  version: "1.0.0"
+  changelog: "Initial release"
+  deprecated: false
+  type: cli
+  entry: python scripts/audit_all.py
+  description: Unified audit tool combining registry, SDK, skills, and docs checks.
+  aliases:
+    - "全面检查"
+    - "统一审查"
+    - "comprehensive audit"
+  examples:
+    - "python scripts/audit_all.py"
+    - "python scripts/audit_all.py sdk"
+    - "python scripts/audit_all.py --verbose"
+  flags:
+    - name: scope
+      description: "Audit scope: all, registry, sdk, skills, docs (default: all)"
+      required: false
+    - name: --sdk-dir
+      description: "Path to SDK directory (default: sdks)"
+      required: false
+    - name: --skills-dir
+      description: "Path to skills directory (default: .claude/skills)"
+      required: false
+    - name: --docs-dir
+      description: "Path to docs directory (default: docs)"
+      required: false
+    - name: --verbose
+      description: "Show detailed output including INFO level"
+      required: false
+    - name: --quiet
+      description: "Only output errors"
+      required: false
+    - name: --help
+      description: Show help message and exit
+      required: false
+  exit_codes:
+    0: All checks passed
+    2: Parameter Error
+    3: Some checks failed
