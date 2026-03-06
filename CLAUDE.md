@@ -150,23 +150,52 @@ python scripts/audit_registry.py       # 健康检查
 
 当收到新需求时，按以下顺序执行：
 
+### 1. 判断工作模式
+
+- **默认**：项目开发模式
+- **检查**：是否满足 SDK 开发模式的触发条件？
+  - 当前工作目录是 `D:\infra_demo\` 且命令涉及修改框架层？
+  - 用户明确下达修改 SDK 的命令？
+  - 用户的命令意图明确表示要修改框架层文件？
+- **不确定时**：询问用户
+
+### 2. 项目开发模式流程
+
 ```
-1. 查看现有 SDK → ls sdks/
-   ↓
-2. 有现成能力？ → 调用 SDK API 或 CLI
+1. 确认项目目录 → 是否已有项目目录？
    ↓ 没有
-3. 确认需求细节（不假设）
+2. 询问项目名称 → 用户提供项目名称（如 my-web-app）
    ↓
-4. 按规范创建/扩展 SDK：
+3. 创建项目目录 → mkdir D:\infra_demo\<project-name>
+   ↓
+4. 切换到项目目录 → cd D:\infra_demo\<project-name>
+   ↓
+5. 查看现有 SDK → python scripts/list_tools.py
+   ↓
+6. 有现成能力？ → 调用 SDK API 或 CLI
+   ↓ 没有
+7. 在项目中实现功能
+   ↓
+8. 功能成熟后，询问是否迁移到 SDK
+```
+
+### 3. SDK 开发模式流程
+
+```
+1. 确认用户意图 → 确实要修改 SDK？
+   ↓ 是
+2. 查看现有 SDK → ls sdks/
+   ↓
+3. 按规范创建/扩展 SDK：
    - [ ] sdks/<sdk>/api/<module>.py
    - [ ] sdks/<sdk>/tests/test_<module>.py
    - [ ] sdks/<sdk>/skills/<skill>.md
    - [ ] .claude/skills/<sdk>-<skill>.md
    - [ ] 更新 manifest.yaml
    ↓
-5. 运行 audit-sdk 验证
+4. 运行 audit-sdk 验证
    ↓
-6. 完成
+5. 完成
 ```
 
 ---
