@@ -53,12 +53,23 @@ infra_demo/
 │   └── ...
 │
 ├── scripts/               # 独立工具脚本（兼容旧架构）
-└── registry/              # 工具注册表（兼容旧架构）
+├── registry/              # 工具注册表（兼容旧架构）
+│
+├── [项目层 - 用户工作区]
+├── my-web-app/            # 用户项目示例 1
+│   ├── src/
+│   └── ...
+├── data-analysis/         # 用户项目示例 2
+│   ├── notebooks/
+│   └── ...
+└── <project-name>/        # 其他用户项目
+    └── ...
 ```
 
 **架构说明**：
-- `sdks/`: SDK 包，每个 SDK 自包含（API + CLI + skills + tests）
-- `.claude/skills/`: Skills 入口层，Claude Code 自动识别
+- **框架层**：`sdks/`、`scripts/`、`.claude/`、`docs/`、`core/`、`registry/` - 稳定的工具库，不随意修改
+- **项目层**：根目录下的项目子目录（如 `my-app/`）- 用户工作区，灵活开发
+- Skills 入口层：`.claude/skills/` - Claude Code 自动识别
 - `scripts/`, `registry/`: 保留用于后向兼容
 
 ---
