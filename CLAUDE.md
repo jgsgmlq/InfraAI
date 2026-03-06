@@ -153,9 +153,9 @@ python scripts/audit_registry.py       # 健康检查
 ### 1. 判断工作模式
 
 - **默认**：项目开发模式
-- **检查**：是否满足 SDK 开发模式的触发条件？
-  - 当前工作目录是 `D:\infra_demo\` 且命令涉及修改框架层？
-  - 用户明确下达修改 SDK 的命令？
+- **检查**：是否满足 SDK 开发模式的触发条件（满足**任一条件**即可）？
+  - 当前工作目录是项目根目录且命令涉及修改框架层（`sdks/`、`scripts/`、`.claude/`、`docs/`、`core/`、`registry/`）？
+  - 用户明确下达修改 SDK 的命令（包含"修改 SDK"、"扩展 SDK"等关键词）？
   - 用户的命令意图明确表示要修改框架层文件？
 - **不确定时**：询问用户
 
@@ -166,9 +166,9 @@ python scripts/audit_registry.py       # 健康检查
    ↓ 没有
 2. 询问项目名称 → 用户提供项目名称（如 my-web-app）
    ↓
-3. 创建项目目录 → mkdir D:\infra_demo\<project-name>
+3. 创建项目目录 → mkdir <project-name>
    ↓
-4. 切换到项目目录 → cd D:\infra_demo\<project-name>
+4. 切换到项目目录 → cd <project-name>
    ↓
 5. 查看现有 SDK → python scripts/list_tools.py
    ↓
